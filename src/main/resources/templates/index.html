@@ -1,61 +1,145 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login V1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images_log/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor_log/bootstrap/css/bootstrap.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts_log/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor_log/animate/animate.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor_log/css-hamburgers/hamburgers.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor_log/select2/select2.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css_log/util.css" />
+    <link rel="stylesheet" type="text/css" href="css_log/main.css" />
+    <!--===============================================================================================-->
+    <style>
+      .show-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: block;
+        font-size: 15px;
+        color: gray;
+      }
+    </style>
+  </head>
 
-<div class="jumbotron text-center">
-    <div class="container">
-        <a href="/" class="lang-logo">
-            <img alt="" src="/lang-logo.png">
-        </a>
-        <h1>Getting Started with Java on Heroku</h1>
-        <p>This is a sample Java application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-        <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-java"><span class="glyphicon glyphicon-flash"></span> Getting Started on Heroku with Java</a>
-        <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir"><span class="glyphicon glyphicon-flash"></span> Getting Started on Heroku Fir with Java</a>
-        <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/java-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-    </div>
-</div>
-<div class="container">
-    <div class="lead">
-        To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to either of the following tutorials:
-        <ul>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java" class="alert-link">Getting Started on Heroku with Java</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir" class="alert-link">Getting Started on Heroku Fir with Java</a></li>
-        </ul>
-    </div>
-    <hr />
-    <div class="row">
-        <div class="col-md-6">
-            <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-            <ul>
-                <li>This app was deployed to Heroku using Git.</li>
-                <li>When Heroku received the source code, it fetched all the dependencies in <a href="https://github.com/heroku/java-getting-started/blob/main/pom.xml">pom.xml</a>, creating a deployable build artifact.</li>
-                <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the build artifact can be mounted and executed.</li>
-                <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-            <ul>
-                <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started on Heroku with Java</a> or <a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir">Getting Started on Heroku Fir with Java</a> guide, then please head back to the tutorial and follow the next steps!</li>
-            </ul>
-            <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-            <ul>
-                <li><a href="https://www.heroku.com/home">Heroku</a></li>
-                <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started on Heroku with Java</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir">Getting Started on Heroku Fir with Java</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/deploying-java">Deploying Java Apps on Heroku</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row" style="margin-top:1em">
-        <div class="col-md-12">
-            <p class="alert alert-info" role="alert">
-                Please do work through the Getting Started guide, even if you do know how to build such an application. The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-            </p>
-        </div>
-    </div>
-</div>
+  <body>
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <div class="login100-pic js-tilt" data-tilt>
+            <img src="images/logo_mdt_baru_1.png" alt="IMG" />
+          </div>
 
-</body>
+          <form class="login100-form validate-form" action="" method="POST">
+            <span class="login100-form-title"> Log Masuk </span>
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="ic"
+                placeholder="IC"
+                required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Password is required"
+            >
+              <input
+                class="input100"
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Kata Laluan"
+                required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </span>
+              <span class="show-btn"><i class="fa fa-eye-slash"></i></span>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <a
+                class="login100-form-btn"
+                name="button-login"
+                href="code/request_dashboard.html"
+              >
+                Log Masuk
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="vendor_log/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor_log/bootstrap/js/popper.js"></script>
+    <script src="vendor_log/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor_log/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor_log/tilt/tilt.jquery.min.js"></script>
+    <script>
+      $(".js-tilt").tilt({
+        scale: 1.1,
+      });
+      document
+        .querySelector(".show-btn")
+        .addEventListener("click", function () {
+          const input = document.getElementById("pass");
+          const eye = this.querySelector("i");
+
+          input.type = input.type == "password" ? "text" : "password";
+          eye.className =
+            input.type == "password" ? "fa fa-eye-slash" : "fa fa-eye";
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="js_log/main.js"></script>
+  </body>
 </html>
