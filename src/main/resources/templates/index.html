@@ -1,17 +1,7 @@
 <!doctype html>
 <html lang="en">
-<%
-	String error = (String) request.getAttribute("error");
-	if (error != null) {
-%>
-		<script>
-		    alert("<%= error %>");
-		</script>
-<%
-	}
-%>
   <head>
-    <title>OSSMS</title>
+    <title>Login V1</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -72,7 +62,7 @@
             <img src="images/logo_mdt_baru_1.png" alt="IMG" />
           </div>
 
-          <form class="login100-form validate-form" action="${pageContext.request.contextPath}/login" method="POST">
+          <form class="login100-form validate-form" action="" method="POST">
             <span class="login100-form-title"> Log Masuk </span>
 
             <div
@@ -83,9 +73,8 @@
                 class="input100"
                 type="text"
                 name="ic"
-                placeholder="No Kad Pengenalan"
+                placeholder="IC"
                 required
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
               />
               <span class="focus-input100"></span>
               <span class="symbol-input100">
@@ -100,8 +89,8 @@
               <input
                 class="input100"
                 type="password"
-                name="password"
-                id="password"
+                name="pass"
+                id="pass"
                 placeholder="Kata Laluan"
                 required
               />
@@ -113,13 +102,13 @@
             </div>
 
             <div class="container-login100-form-btn">
-              <button
+              <a
                 class="login100-form-btn"
                 name="button-login"
-               
+                href="code/request_dashboard.html"
               >
                 Log Masuk
-              </button>
+              </a>
             </div>
           </form>
         </div>
@@ -142,7 +131,7 @@
       document
         .querySelector(".show-btn")
         .addEventListener("click", function () {
-          const input = document.getElementById("password");
+          const input = document.getElementById("pass");
           const eye = this.querySelector("i");
 
           input.type = input.type == "password" ? "text" : "password";
